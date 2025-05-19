@@ -2,7 +2,7 @@
 // Lines 4-21; 51-97; 120-168 are structured by chatgpt
 
 const suits = ['hearts', 'diamonds', 'clubs', 'spades'];
-const values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+const values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'j', 'q', 'k', 'a'];
 var deck, playerHand, dealerHand;
 var gameOver = false;
 var wins = 0;
@@ -26,9 +26,9 @@ function calculateHandValue(hand) {
     let aces = 0;
 
     hand.forEach(card => {
-        if (['K', 'Q', 'J'].includes(card.value)) {
+        if (['k', 'q', 'j'].includes(card.value)) {
             total += 10;
-        } else if (card.value === 'A') {
+        } else if (card.value === 'a') {
             total += 11;
             aces += 1;
         } else {
